@@ -1,0 +1,14 @@
+
+package com.portfolio.Abril.Zorza.Repository;
+
+import com.portfolio.Abril.Zorza.Entity.Persona;
+import java.util.Optional;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface IPersonaRepository extends JpaRepository<Persona,Integer>{
+       public Optional<Persona> findByNombre(String nombre);
+    public boolean existsByNombre(String nombre);
+    
+}
